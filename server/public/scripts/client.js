@@ -5,6 +5,7 @@ var myApp = angular.module('myApp', []);
 
 //link app to controller
 myApp.controller('GalleryController', function() {
+  
   //scoping gallery to this controller
   var gallery = this;
   gallery.imageArray = [
