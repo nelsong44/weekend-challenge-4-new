@@ -3,12 +3,21 @@
   <head>
     <meta charset="utf-8">
     <script type="text/javascript" src="vendors/angular.js"></script>
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
     <script type="text/javascript" src="scripts/client.js"></script>
     <link rel="stylesheet" href="styles/main.css">
     <title>Gallery of My life</title>
   </head>
   <body ng-app="myApp">
-    <div ng-controller="galleryController as gallery">
-    </div>
+    <h1>Gallery of My Life</h1>
+    <div ng-controller="GalleryController as gallery" class="container">
+      <div ng-repeat="galObj in gallery.imageArray" id="galleryDisplay">
+        <div ng-click="gallery.toggleDisplay()" class="allOutput">
+          <img ng-show="gallery.display" ng-src="{{ galObj.image }}" class="image"/>
+          <p ng-hide="gallery.display" class="description">{{galObj.description}}</p>
+        </div> <!-- end allOutput -->
+        <button ng-click="gallery.likesCounter()" class="likes">&hearts; {{ gallery.likes }}</button>
+      </div> <!-- end ng-repeat -->
+    </div> <!-- end GalleryController -->
   </body>
 </html>
