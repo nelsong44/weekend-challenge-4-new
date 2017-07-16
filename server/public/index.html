@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <script type="text/javascript" src="vendors/angular.js"></script>
     <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <script src="https://use.fontawesome.com/fde027699b.js"></script>
     <script type="text/javascript" src="scripts/client.js"></script>
     <link rel="stylesheet" href="styles/main.css">
     <title>Gallery of My life</title>
@@ -15,13 +16,17 @@
 
         <div ng-click="gallery.toggleDisplay(galleryObj)" class="allOutput">
 
-          <img ng-show="galleryObj.display" ng-src="{{ galleryObj.image }}" class="image"/>
+          <img ng-show="galleryObj.display" ng-src="{{ galleryObj.image }}" ng-click="gallery.viewsCounter(galleryObj)" class="image"/>
 
           <p ng-hide="galleryObj.display" class="description">{{galleryObj.description}}</p>
 
         </div> <!-- end allOutput -->
 
-        <button ng-click="gallery.likesCounter(galleryObj)" class="likes">{{ '&hearts;' + ' ' + galleryObj.likes }}</button>
+        <div id="trackers">
+          <button ng-click="gallery.likesCounter(galleryObj)" class="likes">{{ '&hearts;' + ' ' + galleryObj.likes }}</button>
+
+          <span class="views"><i class="fa fa-eye" aria-hidden="true"></i>{{' ' + galleryObj.views}}</span>
+        </div> <!-- end buttons -->
 
       </div> <!-- end ng-repeat -->
     </div> <!-- end GalleryController -->

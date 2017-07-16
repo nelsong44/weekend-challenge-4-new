@@ -5,17 +5,17 @@ var myApp = angular.module('myApp', []);
 
 //link app to controller
 myApp.controller('GalleryController', function() {
-  
+
   //scoping gallery to this controller
   var gallery = this;
   gallery.imageArray = [
     //store relative image paths
-    {image: "images/alAndGary.jpg", description: "My sister, Alex, and her husband, Gary, in London", likes: 0, display: true},
-    {image: "images/anderAndLucy.jpg", description: "My brother, Ander, with his newborn daughter, Lucy", likes: 0, display: true},
-    {image: "images/premie.jpg", description: "Me at Children's Hospital at 4 weeks old being held by my mom", likes: 0, display: true},
-    {image: "images/turtle.jpg", description: "My pup, Turtle", likes: 0, display: true},
-    {image: "images/alAndGary.jpg", description: "My sister, Alex, and her husband, Gary, in London", likes: 0, display: true},
-    {image: "images/alAndGary.jpg", description: "My sister, Alex, and her husband, Gary, in London", likes: 0, display: true}
+    {image: "images/alAndGary.jpg", description: "My sister, Alex, and her husband, Gary, in London", likes: 0, display: true, views: 0},
+    {image: "images/anderAndLucy.jpg", description: "My brother, Ander, with his newborn daughter, Lucy", likes: 0, display: true, views: 0},
+    {image: "images/premie.jpg", description: "Me at Children's Hospital at 4 weeks old being held by my mom", likes: 0, display: true, views: 0},
+    {image: "images/turtle.jpg", description: "My pup, Turtle", likes: 0, display: true, views: 0},
+    {image: "images/alAndGary.jpg", description: "My sister, Alex, and her husband, Gary, in London", likes: 0, display: true, views: 0},
+    {image: "images/alAndGary.jpg", description: "My sister, Alex, and her husband, Gary, in London", likes: 0, display: true, views: 0}
   ];
 
   //increase likes count by 1 on click of button
@@ -23,9 +23,16 @@ myApp.controller('GalleryController', function() {
     galleryObj.likes += 1;
   };//end likesCounter
 
- //toggle display of image and description on click of div
+  //toggle display of image and description on click of div
   gallery.toggleDisplay = function(galleryObj) {
     galleryObj.display = !galleryObj.display;
   };//end toogleDisplay
 
+  //increase views count by 1 on click of image
+  gallery.viewsCounter = function(galleryObj) {
+    galleryObj.views += 1;
+  };//end viewsCounter
+
 });//end gallery controller
+
+//box shadows, comments - button, input field, display of comment
