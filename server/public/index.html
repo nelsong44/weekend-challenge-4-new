@@ -11,12 +11,12 @@
   <body ng-app="myApp">
     <h1>Gallery of My Life</h1>
     <div ng-controller="GalleryController as gallery" class="container">
-      <div ng-repeat="galObj in gallery.imageArray" id="galleryDisplay">
-        <div ng-click="gallery.toggleDisplay()" class="allOutput">
-          <img ng-show="gallery.display" ng-src="{{ galObj.image }}" class="image"/>
-          <p ng-hide="gallery.display" class="description">{{galObj.description}}</p>
+      <div ng-repeat="galleryObj in gallery.imageArray" id="galleryDisplay">
+        <div ng-click="gallery.toggleDisplay(galleryObj)" class="allOutput">
+          <img ng-show="galleryObj.display" ng-src="{{ galleryObj.image }}" class="image"/>
+          <p ng-hide="galleryObj.display" class="description">{{galleryObj.description}}</p>
         </div> <!-- end allOutput -->
-        <button ng-click="gallery.likesCounter()" class="likes">&hearts; {{ gallery.likes }}</button>
+        <button ng-click="gallery.likesCounter(galleryObj)" class="likes">&hearts; {{ galleryObj.likes }}</button>
       </div> <!-- end ng-repeat -->
     </div> <!-- end GalleryController -->
   </body>
