@@ -14,7 +14,7 @@ myApp.controller('GalleryController', function() {
     {image: "images/anderAndLucy.jpg", description: "My brother, Ander, with his newborn daughter, Lucy", likes: 0, display: true, views: 0},
     {image: "images/premie.jpg", description: "Me at Children's Hospital at 4 weeks old being held by my mom", likes: 0, display: true, views: 0},
     {image: "images/turtle.jpg", description: "My pup, Turtle, being a lazy bones", likes: 0, display: true, views: 0},
-    {image: "images/dinoCar.jpg", description: "Funny Dinos trying to go on a weekend adventure", likes: 0, display: true, views: 0},
+    {image: "images/snoozerLucy.jpg", description: "My itty bitty niece, Lucy, ready for snooze time", likes: 0, display: true, views: 0},
     {image: "images/momAndAnder.jpg", description: "My mom and brother fishing on the St. Croix River", likes: 0, display: true, views: 0}
   ];
 
