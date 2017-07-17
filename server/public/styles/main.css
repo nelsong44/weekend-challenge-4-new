@@ -6,8 +6,14 @@ h1, .container, .allOutput {
 .allOutput {
   width: 300px;
   height: 300px;
-  /*background-color: white;*/
-  background-color: #FDD8D1;
+  background-color: #83C2CD;
+  box-shadow: 0 0 20px 4px #636464;
+}
+
+.comment {
+  border: none;
+  color: #FBE5E6;
+  background-color: #C94D49;
 }
 
 .container {
@@ -25,24 +31,25 @@ h1, .container, .allOutput {
 .likes {
   float: left;
   border: none;
-  margin-left: 20px;
+  margin-left: 20%;
   color: #FBE5E6  ;
   background-color: #FD7F7F;
 }
 
-.allOutput, .image, .likes, .views, #galleryDisplay {
+.allOutput, .comment, .image, .likes, .views, #galleryDisplay {
   border-radius: 3px;
 }
 
-.likes, .views {
+.likes, .views, .comment {
   height: 100%;
+  box-shadow: 0 0 10px 2px #636464;
 }
 
 .views {
   float: right;
   padding: 5px;
-  margin-right: 20px;
-  background-color: #ffffff;
+  margin-right: 20%;
+  background-color: #FBE5E6;
 }
 
 #galleryDisplay {
@@ -57,5 +64,5 @@ h1, .container, .allOutput {
 #trackers {
   width: 100%;
   height: 30px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
