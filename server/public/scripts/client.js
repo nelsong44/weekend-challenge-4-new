@@ -13,9 +13,9 @@ myApp.controller('GalleryController', function() {
     {image: "images/alAndGary.jpg", description: "My sister, Alex, and her husband, Gary, in London", likes: 0, display: true, views: 0},
     {image: "images/anderAndLucy.jpg", description: "My brother, Ander, with his newborn daughter, Lucy", likes: 0, display: true, views: 0},
     {image: "images/premie.jpg", description: "Me at Children's Hospital at 4 weeks old being held by my mom", likes: 0, display: true, views: 0},
-    {image: "images/turtle.jpg", description: "My pup, Turtle", likes: 0, display: true, views: 0},
-    {image: "images/alAndGary.jpg", description: "My sister, Alex, and her husband, Gary, in London", likes: 0, display: true, views: 0},
-    {image: "images/momAndAnder.jpg", description: "My mom and my brother fishing on the St. Croix River", likes: 0, display: true, views: 0}
+    {image: "images/turtle.jpg", description: "My pup, Turtle, being a lazy bones", likes: 0, display: true, views: 0},
+    {image: "images/dinoCar.jpg", description: "Funny Dinos trying to go on a weekend adventure", likes: 0, display: true, views: 0},
+    {image: "images/momAndAnder.jpg", description: "My mom and brother fishing on the St. Croix River", likes: 0, display: true, views: 0}
   ];
 
   //increase likes count by 1 on click of button
